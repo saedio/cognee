@@ -83,6 +83,11 @@ With --query-type CODE, --code-query selects the code-graph operation and
             default="pretty",
             help="Output format (default: pretty)",
         )
+        parser.add_argument(
+            "--include-references",
+            action="store_true",
+            help="Include source references in recall results",
+        )
         add_code_arguments(parser)
 
     def execute(self, args: argparse.Namespace) -> None:
